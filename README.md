@@ -1,5 +1,5 @@
 **GIT**
-________
+
 …or create a new repository on the command line 
 
 echo "# Cisco_Terraform" >> README.md
@@ -9,7 +9,8 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/Matz3e/Cisco_Terraform.git
 git push -u origin main
-________
+
+
 …or push an existing repository from the command line
 
 git remote add origin https://github.com/Matz3e/Cisco_Terraform.git
@@ -27,6 +28,7 @@ curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 terraform -install-autocomplete
 terraform version
 
+
 **# Schritt 2:**
 
 Links
@@ -37,6 +39,8 @@ enable on IOS-XE
 ip http secure-server
 restconf
 
+
+________
 
 **# Schritt 3:**
 
