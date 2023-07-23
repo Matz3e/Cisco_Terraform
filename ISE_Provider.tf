@@ -7,10 +7,6 @@ terraform {
   }
 }
 
-provider "ciscoise" {
-  # Configuration options
-}
-
 
 # Configure provider with your  Cisco Identity Services Engine SDK credentials
 provider "ciscoise" {
