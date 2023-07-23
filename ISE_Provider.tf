@@ -1,3 +1,17 @@
+terraform {
+  required_providers {
+    ciscoise = {
+      source = "CiscoISE/ciscoise"
+      version = "0.6.21-beta"
+    }
+  }
+}
+
+provider "ciscoise" {
+  # Configuration options
+}
+
+
 # Configure provider with your  Cisco Identity Services Engine SDK credentials
 provider "ciscoise" {
 
