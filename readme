@@ -20,16 +20,12 @@ ________
 
 
 # Schritt 1: Installieren von Terraform
-sudo apt update
-sudo apt install -y unzip
 
-TERRAFORM_VERSION="1.0.9" # Aktualisieren Sie die Version entsprechend
-
-wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip
-unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip
-
-sudo mv terraform /usr/local/bin/
-
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+  apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release 
+ -cs) main"
+ apt-get update && sudo apt-get install terraform
+terraform -install-autocomplete
 terraform version
 
 # Schritt 2:
@@ -40,7 +36,14 @@ ip http secure-server
 restconf
 
 
+# Schritt 3:
 
+Terraform Commands
+
+terraform init
+terraform plan
+terraform apply
+terraform destory
 
 
 
