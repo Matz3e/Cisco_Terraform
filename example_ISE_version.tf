@@ -1,3 +1,4 @@
+
 terraform {
   required_providers {
     ciscoise = {
@@ -14,10 +15,10 @@ provider "ciscoise" {
   #  Cisco Identity Services Engine user name / password
   username = "admin"
   password = "ISEc0ld"
- 
+
 
   #  Cisco Identity Services Engine base URL, FQDN or IP
-  base_url = "https://10.1.1.20"
+  base_url = "https://10.1.1.21"
 
   # Boolean to enable debugging
   debug = "false"
@@ -39,10 +40,12 @@ provider "ciscoise" {
 
 }
 
-data "ciscoise_mnt_version" "example" {
+data "ciscoise_allowed_protocols" "example" {
   provider = ciscoise
+  page     = 1
+  size     = 1
 }
 
-output "ciscoise_mnt_version_example" {
-  value = data.ciscoise_mnt_version.example.item
+output "ciscoise_allowed_protocols_example" {
+  value = data.ciscoise_allowed_protocols.example.items
 }
