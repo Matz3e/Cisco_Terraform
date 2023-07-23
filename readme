@@ -32,6 +32,12 @@ sudo mv terraform /usr/local/bin/
 
 terraform version
 
+# Schritt 2:
+
+enable on IOS-XE
+
+ip http secure-server
+restconf
 
 
 
