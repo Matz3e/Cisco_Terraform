@@ -40,12 +40,13 @@ provider "ciscoise" {
 
 }
 
-data "ciscoise_allowed_protocols" "example" {
+
+# Get System Info
+
+data "ciscoise_system_config_version" "example" {
   provider = ciscoise
-  page     = 1
-  size     = 1
 }
 
-output "ciscoise_allowed_protocols_example" {
-  value = data.ciscoise_allowed_protocols.example.items
+output "ciscoise_system_config_version_example" {
+  value = data.ciscoise_system_config_version.example.item
 }
